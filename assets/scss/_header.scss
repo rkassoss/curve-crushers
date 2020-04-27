@@ -1,0 +1,161 @@
+header.site-header {
+    color: white;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    background-color: white;
+    background-image: url('../../images/CDC-CoVID-19-banner.jpg');
+    box-shadow: inset 0px -2px 0px $red;
+    .topbar {
+        @include flexbox(); height: 200px;
+        .actions .btn-header {
+            margin-left: 15px;
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+    .brand {
+        width: 200px; //sidebar width;
+        @include flexbox(); align-items: center;
+        a {
+            display: block; flex: 1;
+        }
+        img {
+            max-width: 130px;
+        }
+    }
+    #appTitle {
+        margin-left: 1rem;
+    }
+    .titles {
+        @include flexbox(); align-items: center;
+        padding-left: 1rem;
+        font-weight: bold; color: white;
+        text-transform: uppercase;
+        font-size: 1rem; line-height: 1rem;
+    }
+    .page-title {
+        padding-left: 1rem; color: $darkGrey;
+    }
+    .actions {
+        @include flexbox(); justify-content: flex-end; align-items: center;
+    }
+    .brought-by  {
+        flex: 1;
+        align-self: flex-end;
+        margin: 1rem;
+        text-align: right;
+        img {
+            height: auto; width: 90px;
+        }
+    }
+}
+
+#filterPanel {
+    @include transition(left .3s);
+    position: fixed; left: 0; right: 0; top: 200px;
+    background-color: white; z-index: 1; border-bottom: 1px solid #ddd;
+    #filterbar {
+        padding: 1rem;
+        @include flexbox(); align-items: center; justify-content: space-between;
+        filter-dropdown { flex: 1;}
+        .chart-card {
+            padding: 0;
+        }
+    }
+}
+
+#navigation {
+    position: fixed; left: -100%; top: 200px; bottom: 0; width: 200px; z-index: 999;
+    background-color: $darkGrey; overflow: hidden; color: white;
+    // @include transform(translateX(-100%));
+    @include transition(left .3s);
+    > ul {
+        @include transition(opacity .3s); opacity: .5;
+        ul {
+            @include transition(transform .3s, opacity .3s, max-height .75s);
+            max-height: 0;
+            transform: translateX(100%); opacity: 0; 
+        }
+    }
+    .nav-links {
+        li {
+            margin: 0; padding: 0; overflow: hidden; border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            .groupTitle {
+                @include flexbox(); align-items: center;  padding-left: 15px;
+                img.group-icon {
+                    width: 30px; height: auto;
+                }
+                h3 {
+                    padding-left: 15px;
+                    color: $grey;
+                }
+            }
+            a {
+                white-space: nowrap; display: block; padding: 1rem;
+                font-size: 16px; line-height: 32px; color: white; 
+                @include transition(all .3s, color .3s); text-decoration: none;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.171);
+                }
+                &.active {
+                    background-color: $red; color: white;
+                }
+            }
+        }
+    }
+    &.slideIn {
+        left: 0;
+        > ul {
+            opacity: 1;
+            ul {
+                transform: translateX(0); opacity: 1;
+                max-height: 600px;
+            }
+        }
+        #lastRelaod {
+            opacity: 1;
+        }
+    }
+
+    #lastRelaod {
+        @include transition(opacity .3s);
+        position: absolute; bottom: 0; opacity: 0;
+        margin: 0; padding: 1rem;
+        font-size: 13px;
+        line-height: 16px;
+        font-style: italic;
+    }
+}
+
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px; margin: 5px 15px; height: 26px;
+    .bar {
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color: white;
+        margin: 5px auto;
+        @include transition(transform .3s, width .3s, background-color .3s);
+    }
+    &.active :first-child{
+        transform:
+          rotate(45deg)
+          translate(6px, 6px);
+    }
+    &.active :nth-child(2){width: 0;}
+    &.active :last-child{
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    &:hover {
+        .bar {
+            background-color: $red;
+        }
+    }
+}
+
+.lui-popover-container, .lui-dialog-container {
+    position: fixed !important;
+    z-index: 9999;
+}

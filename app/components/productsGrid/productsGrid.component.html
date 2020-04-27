@@ -1,0 +1,55 @@
+
+<div class="products" id="{{pg.state}}">
+        <div class="panel product" ng-repeat="p in pg.products track by $index" ng-class="pg.activeProduct===$index ? 'showDetails' : 'hideDetails'">
+                <header class="panel-header">
+                    <h3 class="title">{{p.name}}</h3>
+                        <div class="product-logo">
+                                <img class="img-responsive" ng-src="{{pg.rootPath}}/assets/images/products/{{p.name}}.png" alt="{{p.name}}" on-error="https://via.placeholder.com/100x30.png/FFFFFF/000000?text=Missing+Logo">
+                        </div>
+                </header>
+                <div class="panel-body">
+                        <div class="initialKpis">
+                            <div class="row">
+                                <div class="col-md-6" ng-repeat="k in p.mainKpis">
+                                    <kpi-card main-kpi="{{k.kpi}}" mini-chart="{{k.chart}}"></kpi-card>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productDetails text-center">
+    
+                            <div class="reportsList flexrow" ng-if="p.reportLinks">
+                                    <a class="flexitem clickable" ng-repeat="l in p.reportLinks" ng-href="{{l.url}}" target="_blank">
+                                                <span class="lui-icon  lui-icon--download" aria-hidden="true"></span> {{l.name}}
+                                    </a>
+                            </div>
+    
+                            <div class="uniqueKpis flexrow" ng-if="p.hiddenKpis">
+                                    <div class="flexitem kpi-card" ng-repeat="hk in p.hiddenKpis track by $index">
+                                        <!-- <kpi-card main-kpi="{{hk}}"></kpi-card> -->
+                                        <!-- Can't use components, need to handle objects in current scope -->
+                                                <div class="kpi-wrap">
+                                                        <div class="main-kpi" id="{{hk}}"><div class="lds-dual-ring"></div></div>
+                                                </div>
+                                    </div>
+                            </div>
+                            <div class="charts flexrow" ng-if="p.hiddenCharts">
+                                    <div class="flexitem productCharts" ng-repeat="c in p.hiddenCharts track by $index">
+                                        <!-- <chart-card qlik-id="{{c}}"></chart-card> -->
+                                        <!-- Can't use components, need to handle objects in current scope -->
+                                        <div class="chart-card">
+                                                <button class="btn btn-clean btn-chart hidden-xs" ng-click="pg.expand(c)">
+                                                                <span class="lui-icon  lui-icon--expand" aria-hidden="true"></span>
+                                                </button>
+                                                <div class="objectPlaceholder" id="{{c}}"><div class="lds-dual-ring"></div></div>
+                                            </div>
+                                    </div>
+                            </div>
+                        </div>
+                </div>
+                <div ng-if="p.hiddenCharts || p.hiddenKpis || p.reportLinks" class="panel-footer" ng-click="pg.activeProduct===$index ? pg.activeProduct = null : pg.activeProduct = $index; pg.handleObjects($index)">
+                        <span class="lui-icon  lui-icon--arrow-down" aria-hidden="true"></span> 
+                        <span ng-if="pg.activeProduct!=$index">More about {{p.name}}</span>
+                        <span class="lui-icon  lui-icon--arrow-down" aria-hidden="true"></span> 
+                </div>
+        </div>
+    </div>

@@ -1,0 +1,17 @@
+<div class="kpi-card">
+        <div ng-if="vm.loaderUp" class="lds-dual-ring"></div>
+        <div class="obj-header" tooltip-placement="bottom" uib-tooltip="{{kc.mainModel.sub}}">
+                {{kc.mainModel.title}}
+        </div>
+        <div ng-if="!vm.loaderUp" class="kpi-wrap">
+                <div class="main-kpi" id="main-{{kc.qlikId}}" ng-style="kc.styleAtt">
+                        <span class="k-value">{{kc.mainModel.value | autoNumber }}</span>
+                        <span ng-hide="kc.hideLabel" class="k-label">{{kc.mainModel.label}}</span>
+                </div>
+                <div ng-if="kc.secModel" class="sec-kpi" id="sec-{{kc.qlikId}}" ng-style="kc.styleAtt">
+                        <span class="k-value">{{kc.secModel.value | autoNumber | number:2 }}</span>
+                        <span class="k-label">{{kc.secModel.label}}</span>
+                </div>
+                <span class="lui-icon  lui-icon--link" aria-hidden="true" ng-if="kc.linkTo"></span>
+        </div>
+</div>

@@ -1,0 +1,282 @@
+[
+    {
+        "name": "Oncology",
+        "state":"oncology",
+        "reportLinks": [
+            {
+                "name": "Xtandi Monthly Executive Metrics",
+                "url": "https://sp.astellasonline.net/sites/AIM/Monthly/NonRoster/ONC%20Xtandi%20Exec%20Metrics.pdf?Web=1"
+            }
+        ],
+        "homepageKpi": "hPcjV",
+        "mainKpis": [
+            {
+                "kpi": "DYYqJKh",
+                "chart": "JPHjje"
+            }, 
+            {
+                "kpi": "mkTjfP",
+                "chart": "mUPDVr"
+            }
+        ],
+        "products": [
+            {
+                "name": "Xtandi",
+                "mainKpis": [
+                    {
+                        "kpi": "cmyFwH",
+                        "chart": "tCpjtH"
+                    }, 
+                    {
+                        "kpi": "DfWrPmh",
+                        "chart": "spJw"
+                    }
+                ],
+                "hiddenKpis": ["JrGmGg","RbJuJf"],
+                "hiddenCharts": ["jcBQvp","gPjqyn","nsvDtK"],
+                "reportLinks": [
+                    {
+                        "name": "Xtandi Monthly Executive Metrics",
+                        "url": "https://sp.astellasonline.net/sites/AIM/Monthly/NonRoster/ONC%20Xtandi%20Exec%20Metrics.pdf?Web=1"
+                    }
+                ]
+            },
+            {
+                "name": "Xospata",
+                "mainKpis": [
+                    {
+                        "kpi": "TqRAbZP",
+                        "chart": "Kezppvz"
+                    },
+                    {
+                        "kpi": "eJzMHma",
+                        "chart": "MSMgN"
+                    }
+                ],
+                "hiddenKpis": ["YYjYKBU","CjGrdN","hacGPG","EqQrNPe"],
+                "hiddenCharts": ["XTUL","XHBLJX"]
+            },
+            {
+                "name": "Tarceva",
+                "mainKpis": [
+                    {
+                        "kpi": "gDFtNL",
+                        "chart": "fttqeXE"
+                    },
+                    {
+                        "kpi": "XpUKNga",
+                        "chart": "pwQMRGR"
+                    }
+                ]
+            }
+        ]
+    },{
+        "name": "Urology",
+        "state": "urology",
+        "homepageKpi":"GDQajU",
+        "mainKpis": [
+            {
+                "kpi": "JnhfY",
+                "chart": "crWp"
+            }, 
+            {
+                "kpi": "tjmm",
+                "chart": "dVvKTyN"
+            }
+        ],
+        "reportLinks": [
+            {
+                "name": "OAB Monthly Scorecard",
+                "url": "https://sp.astellasonline.net/sites/AIM/Monthly/NonRoster/OAB%20%20APUS%20Scorecard%20OCT%202019.pdf?Web=1"
+            }
+        ],
+        "products":[
+            {
+                "name": "Myrbetriq",
+                "mainKpis": [
+                    {
+                        "kpi": "gDFtNL",
+                        "chart": "fttqeXE"
+                    },
+                    {
+                        "kpi": "XpUKNga",
+                        "chart": "pwQMRGR"
+                    }
+                ],
+                "hiddenKpis": ["YRZzTh","CjGrdN","CmFsJ","WXuJ","JudhwNd","HNjYjvg"],
+                "hiddenCharts": ["BmGQqnb","jwyEhr"]
+            },
+            {
+                "name": "VESICare",
+                "mainKpis": [
+                    {
+                        "kpi": "nyyB",
+                        "chart": "mmbRm"
+                    },
+                    {
+                        "kpi": "vgmN",
+                        "chart": "QPpbDj"
+                    }
+                ],
+                "hiddenKpis": ["PkUKJqJ","twbjFEM","jZRGE","NKXKJ"],
+                "hiddenCharts": []
+            }
+        ]
+    },
+    {
+        "name": "Cardiovascular",
+        "state": "cardio",
+        "reportLinks": [
+            {
+                "name": "Cardiology Monthly Scorecard",
+                "url": "https://sp.astellasonline.net/sites/AIM/Monthly/NonRoster/CV%20%20APUS%20Scorecard%20Aug%202019.pdf?Web=1"
+            }
+        ],
+        "homepageKpi":"cAZebv",
+        "mainKpis": [
+            {
+                "kpi": "ztaer",
+                "chart": "ZVzy"
+            }, 
+            {
+                "kpi": "wxfQj",
+                "chart": "PrApDAU"
+            }
+        ],
+        "products": [
+            {
+                "name": "Lexiscan",
+                "mainKpis": [
+                    {
+                        "kpi": "qbke",
+                        "chart": "rCyvXj"
+                    },
+                    {
+                        "kpi": "EjNcqtA",
+                        "chart": "jpfAEU"
+                    }
+                ],
+                "hiddenKpis": ["CgURJE","JgYBJs","bHrMJS","QCvX","FbSEt","bJm"],
+                "hiddenCharts": ["RyJGz","dmpRjD","THKPNW"]
+            }
+        ]
+    },
+    {
+        "name": "Infectious Disease",
+        "state": "infectious",
+        "homepageKpi":"FVrSXDH",
+        "mainKpis": [
+            {
+                "kpi": "LnBjK",
+                "chart": "rYESuhh"
+            }, 
+            {
+                "kpi": "qpBPb",
+                "chart": "sAGwRBg"
+            }
+        ],
+        "reportLinks": [
+            {
+                "name": "Antifungal Monthly Scorecard",
+                "url": "https://sp.astellasonline.net/sites/AIM/Monthly/NonRoster/AI%20%20APUS%20Scorecard%20Aug%202019.pdf?Web=1"
+            }
+        ],
+        "products": [
+            {
+                "name": "Cresemba",
+                "mainKpis": [
+                    {
+                        "kpi": "fPmjuC",
+                        "chart": "hxUEKwy"
+                    },
+                    {
+                        "kpi": "gcPuQL",
+                        "chart": "MJUbUkj"
+                    }
+                ],
+                "hiddenKpis": ["dHCYrR","sVTAaM","zxMNejw","PkCVAa","jKPcdn"],
+                "hiddenCharts": ["jaaZVH","VphBR","jzwgnD"]
+            },
+            {
+                "name": "Mycamine",
+                "mainKpis": [
+                    {
+                        "kpi": "zPemKF",
+                        "chart": "yYBqm"
+                    },
+                    {
+                        "kpi": "xfHAN",
+                        "chart": "YcmBVF"
+                    }
+                ],
+                "hiddenKpis": ["WsHMQem","fmLPWrL","qpdxPnZ","PDArFFv"],
+                "hiddenCharts": ["TuNSxSv"]
+            },
+            {
+                "name": "AmBiscome",
+                "mainKpis": [
+                    {
+                        "kpi": "BwNhc",
+                        "chart": "aHhwuJE"
+                    },
+                    {
+                        "kpi": "TkdBRj",
+                        "chart": "KrnHqMv"
+                    }
+                ],
+                "hiddenKpis": ["WLpkEWF","tPjsht","RvPfeWs","LujfD"],
+                "hiddenCharts": ["JpYvyhJ"]
+            }
+        ]
+    },
+    {
+        "name": "Immunology",
+        "state": "immunology",
+        "homepageKpi":"MTuReGQ",
+        "mainKpis": [
+            {
+                "kpi": "sufty",
+                "chart": "JmbmAp"
+            }, 
+            {
+                "kpi": "fhAHB",
+                "chart": "ZrfHbjX"
+            }
+        ],
+        "reportLinks": [
+            {
+                "name": "Immunology Monthly Scorecard",
+                "url": "https://sp.astellasonline.net/sites/AIM/Monthly/NonRoster/IMM%20%20APUS%20Scorecard%20Aug%202018.pdf?Web=1"
+            }
+        ],
+        "products": [
+            {
+                "name": "Prograf",
+                "mainKpis": [
+                    {
+                        "kpi": "dzdEmH",
+                        "chart": "EzrKZbq"
+                    },
+                    {
+                        "kpi": "jwGh",
+                        "chart": "qmQMgj"
+                    }
+                ]
+            },
+            {
+                "name": "Astagraf XL",
+                "mainKpis": [
+                    {
+                        "kpi": "CVsLQ",
+                        "chart": "ZsdGQmj"
+
+                    },
+                    {
+                        "kpi": "mzeDhu",
+                        "chart": "GJPKvFs"
+                    }
+                ]
+            }
+        ]
+    }
+]

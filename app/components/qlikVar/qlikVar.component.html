@@ -1,0 +1,3 @@
+<div ng-if="qv.varUi=='radio'" class="btn-group">
+        <label ng-repeat="option in qv.varOptions" class="btn btn-primary" ng-model="qv.varModel" uib-btn-radio="option" ng-change="qv.updateVar()" uib-uncheckable>{{option}}</label>
+</div>

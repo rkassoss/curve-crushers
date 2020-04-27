@@ -1,0 +1,371 @@
+
+html {
+    font-size: 16px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif !important; font-size: 1rem;
+    &:before{
+        // content: ''; background-image: url('../../images/astellas-stars.png');
+        background-repeat: no-repeat; background-position: bottom right;
+        background-size: 500px; opacity: .25;
+        position: fixed; right: 0; bottom: 0; left: 0; top: 0;
+    }
+    a {
+        color: $blue; font-style: italic; 
+        @include transition(color .3s);
+        text-decoration: none;
+        &:hover {
+            text-decoration: none; color: $red;
+        } 
+    }
+}
+
+.lui-icon {
+    @include transition(color .3s);
+}
+
+.flexrow {
+    @include flexbox(); flex-direction: row; margin: 0 -1rem;
+    .flexitem {
+        flex: 1; margin: 0 1rem;
+    }
+}
+
+button, a {
+    @include transition(background-color .3s, color .3s);
+}
+
+.btn {
+    display: block; padding: 5px 10px; border: 0; border-radius: 0;
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+    color: inherit; text-decoration: none;
+}
+
+.btn-primary {
+    background-color: $red; color: white; border: 0; box-shadow: none;
+    border-radius: 5px; 
+    .lui-icon {
+        margin-left: 10px;
+    }
+    &:hover, &:focus, &.active, &:active, &.active:focus,  &.active:hover, &.active.focus {
+        border: 0;
+        background-color: darken($red,10%);
+        color: white;
+    }
+}
+
+.btn-clean {
+    background-color: transparent; border: 0; box-shadow: none;
+}
+
+#viewWrap {
+    @include transition(padding .3s);
+    padding-left: 15px;
+    padding-top: 320px;
+    position: relative;
+    z-index: 0;
+}
+
+section {
+    h2 {
+        margin: 3rem 0 1rem;
+    }
+}
+
+ul {
+    margin: 0;
+    li {
+        list-style: none;
+    }
+}
+
+.margin-bottom {
+    margin-bottom: 30px;
+}
+
+// remove elipsis for long kpi labels
+.qv-object-kpi {
+    .qv-inner-object {
+        overflow: inherit;
+    }
+    .measure-title.ellips-text {
+        white-space: inherit;
+        overflow: inherit;
+    }
+}
+
+.panel {
+    border-radius: 0; border: 1px solid $lightGrey; margin: 1rem 0 3rem; position: relative;
+    background-color: #fbfbfbbe;
+    border-top: 2px solid $grey;
+    &#apus {
+        .panel-header {
+            justify-content: normal;
+        }
+    }
+    .panel-header {
+        @include flexbox(); align-items: center; justify-content: space-between;
+        padding: 0 1rem; color:$red; height: 50px; border-bottom: 1px solid $lightGrey;
+        background-color: white;
+        h3 {
+            margin: 0; font-size: 1rem;
+            -webkit-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .btn-group {
+            margin-left: 1rem;
+            label {
+                color: $darkGrey; font-size: 1rem;
+                border: 1px solid rgba($darkGrey,.1);
+                border-radius: 5px;
+                @include transition(all .3s);
+                &.active {
+                    color: $red; background-color: white;
+                    &:hover {
+                        color: $red; background-color: white;
+                    }
+                }
+                &:hover {
+                    background-color: rgba($darkGrey,.1);
+                }
+            }
+        }
+        .dropdown-menu {
+            left: auto; right: 0;
+        }
+    }
+}
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+.custom-dropdown {
+    position: relative; min-width: 160px; margin-right: 1rem;
+    .btn-toggle {
+        background-color: white; border: 1px solid transparent;
+        width: 100%; border-radius: 5px; text-align: left; border: 1px solid #ddd;
+        @include transition(all .3s); @include flexbox();
+        span.field-label {
+            flex: 1;
+        }
+        span.lui-icon--arrow-down {
+            color: $grey;
+            transform: rotate(0); @include transition(transform .3s);
+        }
+        &:focus, &:hover {
+            border-color: $darkGrey;
+        }
+        &.open {
+            span.lui-icon--arrow-down {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .clear-field {
+        font-style: italic; font-size: 12px; position: absolute;
+        top: -1rem; color: $grey; cursor: pointer;
+        @include transition(color .3s);
+        &:hover {
+            color: $red;
+        }
+    }
+    .dropdown-menu {
+        display: block; opacity: 0; max-height: 0; margin: 0; padding: 0;
+        position: absolute; overflow-y: scroll; width: 100%;
+        @include transition(all .3s);
+        .search-wrap {
+            border-bottom: 1px solid #c5c5c5;
+            @include flexbox();
+            .lui-search__clear-button {
+                position: absolute; right: 0;
+            }
+            .lui-icon {
+                color: $grey;
+            }
+        }
+        .search-field {
+            padding: 5px;
+            border: 0;
+            width: 100%;
+        }
+        &.open {
+            opacity: 1; max-height: 300px;
+        }
+        li {
+            color: $darkGrey; font-size: 14px;
+            border-bottom: 1px solid rgba($darkGrey,.1);
+            cursor: pointer;
+            span {
+                display: block; cursor: pointer;
+                @include transition(all .3s); padding: 5px; border-bottom: 1px solid rgba(white,.75);
+                &:hover {
+                    background-color: rgba($darkGrey,.1);
+                }
+            }
+            &.O span {
+                background-color: white;
+                &:hover {
+                    background-color: #eaeaea;
+                }
+            }
+            //selected
+            &.S span {
+                background-color: #449d44; color: white;
+            }
+            //closed selection
+            &.X span {
+                background-color: #ddd;
+                color: #333333;
+                &:hover {
+                    background-color: #bbb;
+                }
+            }
+        }
+    }
+}
+
+.obj-header {
+    position: relative; z-index: 1;
+    @include flexbox();
+    font-weight: bold; color: $grey;
+    h3 {
+        margin: 0;
+    }
+    p {
+        font-weight: 400;
+    }
+    .btn {
+        margin: 0 0 0 auto;
+    }
+    .obj-btns {
+        flex: 1;
+    }
+}
+
+.modal {
+    .objectPlaceholder {
+        height: 80vh;
+    }
+}
+
+#filterbar {
+    @include flexbox();
+    chart-card {
+        flex: 1;
+        max-width: 250px;
+    }
+    .objectPlaceholder {
+        height: 35px;
+    }
+}
+
+#kpis {
+    @include flexbox(); justify-content: space-between; flex-wrap: wrap; 
+    chart-card {
+        max-width: 250px;
+    }
+    kpi-card {
+        flex: 1;
+    }
+    .objectPlaceholder {
+        height: 120px;
+    }
+}
+
+.objectPlaceholder {
+    width: 100%;
+    @include transition(opacity 1s);
+    @include opacity(1);
+    @include flexbox(); justify-content: center; align-items: center;
+    article.qv-object {
+        header.qv-object-header {
+            h1 {
+                margin: 0; color: $grey !important;
+            }
+        }
+    }
+    &.animateOut {
+        @include opacity(0);
+    }
+
+    &.full-height {
+        height: 600px;
+    }
+}
+
+.modal-lg {
+    width: 90%;
+}
+
+.kpi-card {
+    max-width: 400px; height: 100%;
+    border: 1px solid #f4f4f4; @include transition(all .3s);
+    box-shadow: 1px 1px 5px 0px #00000014; background-color: $red; color: white;
+    padding: 1rem;
+    @include flexbox(); 
+    flex-direction: column;
+    justify-content: space-around;
+    .kpi-wrap {
+        @include flexbox(); 
+        align-items: flex-end;
+    }
+    .obj-header {
+        line-height: 1rem; color: rgba(white, 0.75);
+    }
+    .k-value {
+        font-weight: 700;
+        display: block;
+    }
+    .k-label {
+        display: block;
+        font-size: 12px; line-height: 12px;
+    }
+    .main-kpi {
+        .k-value {
+            font-size: 2rem;
+        }
+    }
+    .sec-kpi {
+        margin-left: 1rem; padding-left: 1rem;
+        border-left: 1px solid rgba(white,0.5);
+        .k-value {
+            font-size: 1rem;
+        }
+    }
+    .lds-dual-ring:after {
+        border: 5px solid rgba(white,0.5);
+        border-color: rgba(white,0.5) transparent rgba(white,0.5) transparent;
+    }
+}
+
+.chart-card {
+    padding: 1rem; position: relative;
+}
+
+
+.nav-tabs {
+    border-bottom: 0;
+    li {
+        margin-bottom: -2px;
+        a {
+            color: $grey;
+        }
+    }
+}
+.tab-content {
+    border: 1px solid #ddd; border-radius: 5px;
+}
+
+#sources {
+    ul {
+        li {
+            line-height: 2rem; border-bottom: 1px solid rgba($darkGrey,.1);
+        }
+    }
+}

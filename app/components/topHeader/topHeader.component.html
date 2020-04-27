@@ -1,0 +1,68 @@
+
+<header class="site-header">
+    <div class="topbar">
+        <div class="actions">
+            <div class="hamburger" ng-class="{'active': th.sidebarIn }" ng-click="th.toggleSidebar()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <div id="filterToggle">
+            <button ng-click="th.showFilters = !th.showFilters">
+                <span class="lui-icon lui-icon--filter" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="titles">
+            <h1>COVID-19 Dashboard</h1>
+        </div>
+        <div class="brought-by">
+            <span class="hidden-xs">Brought to you by the Curve Crushers @ </span><img src="./assets/images/Qlik-Logo_WHITE.png">
+        </div>
+    </div>
+</header>
+
+<div id="filterPanel" ng-class="{'slideIn' : th.sidebarIn }">
+    <div id="CurrentSelections"></div>
+    <div id="filterbar" ng-class="{'mobile-reveal' : th.showFilters}">
+        <!-- country -->
+        <filter-dropdown field-name="country" field-label="Country"></filter-dropdown>
+        <!-- state -->
+        <filter-dropdown field-name="State" field-label="State"></filter-dropdown>
+        <!-- county -->
+        <filter-dropdown field-name="County" field-label="County"></filter-dropdown>
+        <!-- date -->
+        <filter-dropdown field-name="date" field-label="Date"></filter-dropdown>
+        <!-- animator -->
+        <chart-card class="hidden-xs hidden-sm" qlik-id="aGEPrp" remove-header="true"></chart-card>
+    </div>
+</div>
+
+<div id="navigation" ng-class="{'slideIn' : th.sidebarIn }">
+        <ul class="nav-links">
+            <li>
+                <a href="#daily" du-smooth-scroll du-scrollspy>
+                    <span class="nav-label">Daily Stats</span>
+                </a>
+            </li>
+            <li>
+                <a href="#policy" du-smooth-scroll du-scrollspy>
+                    <span class="nav-label">Policy Impact</span>
+                </a>
+            </li>
+            <li>
+                <a href="#info" du-smooth-scroll du-scrollspy>
+                    <span class="nav-label">Information Resources</span>
+                </a>
+            </li>
+            <!-- <li>
+                <a href="#sources" du-smooth-scroll du-scrollspy>
+                    <span class="nav-label">Data Sources</span>
+                </a>
+            </li> -->
+        </ul>
+        <div id="lastRelaod">
+            Last reload:<br>
+            {{ th.relaodTime | date:"MM/dd/yyyy 'at' h:mma" }}
+        </div>
+</div>

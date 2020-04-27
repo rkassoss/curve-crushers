@@ -1,0 +1,68 @@
+[
+    {
+        "appname": "exec",
+        "containers": [
+            {
+                "name":"Net Sales",
+                "mainKpis": [
+                    {
+                        "kpi":"udUhNT",
+                        "chart":"BQLJeq"
+                    }, {
+                        "kpi":"WcUyN",
+                        "chart":"AFGn"
+                    }
+                ]
+            }, {
+                "name":"Operating Profits",
+                "mainKpis": [
+                    {
+                        "kpi":"DWVJpU",
+                        "chart":"vbgp"
+                    }, {
+                        "kpi":"JBdpqQd",
+                        "chart":"ZKWTCB"
+                    }
+                ]
+            }, {
+                "name":"Projected Ratings",
+                "mainKpis": [
+                    {
+                        "kpi":"kdMHK",
+                        "chart":"TAkTaL"
+                    }, {
+                        "kpi":"RjHCwwK",
+                        "chart":"gPPbUXe"
+                    }
+                ]
+            }
+        ]
+    }, {
+        "appname": "pi",
+        "containers": [
+            {
+                "name":"Net Sales",
+                "mainKpis": [
+                    {
+                        "kpi":"udUhNT",
+                        "chart":"BQLJeq"
+                    }, {
+                        "kpi":"WcUyN",
+                        "chart":"AFGn"
+                    }
+                ]
+            }, {
+                "name":"Operating Profits",
+                "mainKpis": [
+                    {
+                        "kpi":"DWVJpU",
+                        "chart":"vbgp"
+                    }, {
+                        "kpi":"JBdpqQd",
+                        "chart":"ZKWTCB"
+                    }
+                ]
+            }
+        ]
+    }
+]

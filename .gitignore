@@ -1,0 +1,20 @@
+# NPM packages folder.
+node_modules/
+
+# Bower folder.
+bower_components/
+
+# Dist folder.
+assets/dist/
+
+# Build
+.build/
+
+# ZIP
+.BUILDZIP/
+
+#master
+.master/
+
+#MASTERZIP
+.MASTERZIP/

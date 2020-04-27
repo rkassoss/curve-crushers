@@ -1,0 +1,16 @@
+<div class="chart-card" ng-style="cc.styleAtt">
+        <div class="obj-header" ng-if="!cc.removeHeader">
+                <div ng-hide="cc.hideTitle" class="obj-title">
+                        {{cc.title}}
+                        <p>{{cc.sub}}</p>
+                </div>
+                
+                <div class="obj-btns">
+                        <button ng-if="cc.qExpand" class="btn btn-clean btn-chart hidden-xs" ng-click="cc.expand(c)"><span class="lui-icon  lui-icon--expand" aria-hidden="true"></span></button>
+                </div>
+        </div>
+        <div class="objectPlaceholder {{cc.objectClass}}" id="{{cc.qlikId}}"><div class="lds-dual-ring"></div></div>
+        <div class="chart-footer">
+                {{cc.footer}}
+        </div>
+</div>

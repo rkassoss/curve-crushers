@@ -1,0 +1,27 @@
+{{ fd.selected}}
+<!-- Simple dropdown -->
+<div class="custom-dropdown">
+        <span class="clear-field" ng-show="fd.hasSelection" ng-click="fd.clearField()">Clear Selection</span>
+        
+        <button type="button" class="btn btn-toggle" id="dropdown_{{fd.fieldName}}" ng-click="fd.filterDropdownService.toggleDDFilters(fd.fieldName)" ng-class="{'open': fd.filterDropdownService.currentItem === fd.fieldName }">
+                <span class="field-label">{{fd.fieldLabel}}</span>
+                
+                <span class="lui-icon lui-icon--arrow-down" aria-hidden="true"></span>
+                <!-- {{fd.activeSelection}} -->
+        </button>
+
+        <ul class="dropdown-menu" aria-labelledby="dropdown_{{fd.fieldName}}" ng-class="{'open': fd.filterDropdownService.currentItem === fd.fieldName }" selectable selectable-list="fd.rows" selectable-out="fd.selected" selectable-events="{stop:'fd.myMethod($event, $ui, $selected, $list)'}">
+                <div class="search-wrap">
+                        <span class="lui-icon  lui-icon--search  lui-search__search-icon"></span>
+                        <input type="text" class="search-field" placeholder="Search" ng-model="fd.searchString" ng-change="fd.searchWithWildCard()">
+                        <button class="lui-search__clear-button" ng-show="fd.searchString" ng-click="fd.clearSearch()" title="Clear" aria-hidden="false">
+                                <span class="lui-icon  lui-icon--small  lui-icon--close"></span>
+                        </button>
+                </div>
+                
+                <li ng-repeat="row in fd.rows" ng-class="row.qState">
+                        <span ng-if="fd.fieldType == 'N'" ng-click="fd.applySelection(row.qNum)">{{ row.qText }}</span>
+                        <span ng-if="fd.fieldType == 'D'" ng-click="fd.applySelection(row.qText)">{{ row.qText }}</span>
+                </li>
+        </ul>
+</div>

@@ -1,0 +1,56 @@
+  <div class="home">
+    <section id="kpis">
+      <!-- total cases -->
+      <kpi-card qlik-id="YwAmZp" hide-label="true"></kpi-card>
+      <!-- new cases -->
+      <kpi-card qlik-id="aJBKCFh" hide-label="true"></kpi-card>
+      <!-- deaths -->
+      <kpi-card qlik-id="hLMPR" hide-label="true"></kpi-card>
+      <!-- r0 -->
+      <kpi-card qlik-id="XQrLc"></kpi-card>
+      <!-- Unemplyment -->
+      <kpi-card qlik-id="AJPj" hide-label="true"></kpi-card>
+    </section>
+    
+    <section id="daily">
+      <h2>Daily Stats</h2>
+      <multi-chart objects="[{title:'Map',qlikId:'SsTNKy'},{title: 'Trending Cases', qlikId: 'fnrpQKp'}, {title: '3 Day Cases Vs. 7 Day Testing',qlikId: 'AjfKC'}]"></multi-chart>
+    </section>
+
+    <section id="policy">
+      <h2>Policy Impact</h2>
+      <multi-chart objects="[{title: 'Median R0 by Lockdown Status', qlikId: 'cKFpfn'},{title: '7-Day R0 by Lockdown Period', qlikId: 'FWazpm'}, {title: 'Policy/Legistlation Details', qlikId: 'jJTe'}]"></multi-chart>
+      <h2>Mobility and Stringency Impact</h2>
+      <multi-chart objects="[{title: 'Mobility Index Vs. Stringency', qlikId: 'pFyXpH'},{title: 'Mobility Vs. Effective R0', qlikId: 'derKZ'}, {title: 'Stringency Index', qlikId: 'KVYUETc'}]"></multi-chart>
+    </section>
+
+    <section id="info">
+      <h2>Informational Resources</h2>
+      <p>Drill in to a state or a county level to reveal details</p>
+      <qlik-var qlik-var="vMapToggle" var-options="['Hospitals', 'Testing Centers', 'Urgent Care', 'Nursing Homes']" var-ui="radio"></qlik-var>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tab-content">
+            <!-- map -->
+            <chart-card style-att="border: 1px solid #ddd;" qlik-id="AXFxFK" q-expand="true"></chart-card>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="sources">
+      <h2>Data Sources</h2>
+      <ul>
+        <li>Unemployment - <a target="_blank" href="https://www.census.gov">Census</a></li>
+        <li>Legistlation - ?</li>
+        <li>Urgent Care - ?</li>
+        <li>Nursing Home Locations - ?</li>
+        <li>Hospital Locations - ?</li>
+        <li>Demographic - <a target="_blank" href="https://www.census.gov">Census</a></li>
+        <li>Mobilty Data - <a target="_blank" href="https://www.apple.com/covid19">Apple</a></li>
+        <li>US Test Stations - <a target="_blank" href="https://evive.com">Evive</a></li>
+        <li>World Bank</li>
+      </ul>
+    </section> -->
+
+  </div>

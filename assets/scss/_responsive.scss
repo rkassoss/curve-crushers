@@ -1,0 +1,126 @@
+// mobile - xs
+@media (max-width:767px) {
+    header.site-header .topbar {
+        height: 80px;
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+    header.site-header .brought-by {
+        align-self: center; margin: 0 1rem 0 0;
+    }
+    #filterPanel, #navigation {
+        top: 80px;
+    }
+    .kpi-card {
+        .main-kpi .k-value, .obj-header {
+            font-size: 1rem; line-height: 1rem;
+        }
+    }
+    .objectPlaceholder {
+        height: 300px;
+    }
+    #viewWrap {
+        padding-top: 140px;
+        &.move {
+            margin-right: 0;
+            padding-left: 15px;
+        }
+        &.shift {
+            margin-left: 0;
+        }
+    }
+    #navigation {
+        width: 300px;
+        .nav-links li a {
+            font-size: 21px; line-height: 28px;
+        }
+    }
+    .panel#apus .panel-header {
+        justify-content: space-between;
+    }
+    #filterToggle {
+        @include flexbox(); justify-content: center; align-content: center;
+        button {
+            background: transparent; border: 0;
+        }
+    }
+    #filterPanel #filterbar{
+        display: block; padding: 0;
+        max-height: 0; overflow: hidden;
+        @include transition(all .3s);
+        .custom-dropdown {
+            margin-bottom: 1rem; margin-right: 0;
+        }
+        &.mobile-reveal {
+            max-height: 1000px; padding: 1rem 1rem 0 1rem; overflow: inherit;
+        }
+    }
+}
+
+// xxs
+@media (max-width:380px) {
+
+}
+
+// sm
+@media (min-width:768px) {
+    #filterToggle {
+        display: none;
+    }
+    .objectPlaceholder {
+        height: 400px;
+    }
+    #viewWrap {
+        padding-left: 15px;
+        &.move {
+            margin-right: 0;
+            padding-left: 15px;
+        }
+        &.shift {
+            margin-left: 0;
+        }
+    }
+    #filterPanel {
+        left: 0;
+    }
+    .products .product .productDetails .uniqueKpis .kpi-card {
+        flex: 0 1 30%;
+    }
+}
+
+// md
+@media (min-width:992px) {
+    .objectPlaceholder {
+        height: 500px;
+    }
+    #viewWrap {
+        padding-left: 15px;
+        &.move {
+            margin-right: 0;
+            padding-left: 215px;
+        }
+        &.shift {
+            margin-left: 0;
+        }
+    }
+    #filterPanel {
+        left: 0;
+        &.slideIn {
+            left: 200px;
+        }
+    }
+}
+
+// lg
+@media(min-width:1200px) {
+    
+}
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    .qv-object-kpi .measure-title {
+        font-size: 14px !important;
+    }
+}
